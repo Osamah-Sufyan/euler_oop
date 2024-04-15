@@ -137,22 +137,23 @@ def simulate(params):
         min_intensity = min(unique_minima)
     else:
         min_intensity = E1_abs[round(8000/0.05)]**2  # or any other value indicating no minima
-    return theta, max_intensity, min_intensity
+    return num_maxima
 
 if __name__ == '__main__':
     # ... rest of your code ...
-    mesh = 100
-    d_omeg_values = np.linspace(0.1, 1.0, mesh)  # replace 0.1 and 1.0 with your desired range
-    theta_values = np.linspace(0, 0.7*np.pi, mesh)
+    mesh = 10
+    d_omeg_values = np.linspace(-0.2, 0.2, mesh)  # replace 0.1 and 1.0 with your desired range
+    theta_values = np.linspace(0, 2*np.pi, mesh)
 
     # Parallelize simulations
     #
     params = list(itertools.product(d_omeg_values, theta_values))
     with Pool() as p:
-        results = p.map(simulate, params)
+        maxima_counts = p.map(simulate, params)
+
 
     # Separate the results into two lists: thetas and maxima
-        thetas, maxima, minima = zip(*results)
+    maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
 
 
     # Plot the maxima intensities with respect to theta
@@ -165,13 +166,7 @@ if __name__ == '__main__':
     # plt.legend()
     # plt.show()
 
-    mesh = 5
-    tolerance = 1e-0
-    # Create parameter combinations
-    params = [(d_omeg, theta) for d_omeg in np.linspace(-0.2, 0.2, mesh) for theta in np.linspace(0, 2*np.pi, mesh)]
-
-    with Pool() as p:
-        maxima_counts = p.map(simulate, params)
+    
 
     # # Ensure maxima_counts is defined and manipulated within the same block
     maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
