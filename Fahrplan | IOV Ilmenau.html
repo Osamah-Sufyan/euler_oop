@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="/static/iovr/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/static/iovr/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/static/iovr/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/static/iovr/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/static/iovr/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/static/iovr/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/static/iovr/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/static/iovr/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/iovr/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/static/iovr/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/iovr/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/static/iovr/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/iovr/favicons/favicon-16x16.png">
+<link rel="manifest" href="/static/iovr/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#f9b800">
+<meta name="msapplication-TileImage" content="/static/iovr/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#f9b800">
+<meta name="google-site-verification" content="attVhKKSxkxoIPh_-LDQ529eamKV2kXfmdy8j3DrTXk" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-eval' 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://ticket.iov-ilmenau.de/kunde/; script-src-attr 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self'; style-src-elem 'self' 'unsafe-inline' https://ticket.iov-ilmenau.de/kunde/; style-src-attr 'self' 'unsafe-inline'; img-src 'self' https://*.googleapis.com/ https://maps.gstatic.com https://maps.googleapis.com data:; font-src 'self' https://ticket.iov-ilmenau.de/kunde/; connect-src 'self' https://maps.googleapis.com https://ticket.iov-ilmenau.de/; media-src 'self'; object-src 'self'; child-src 'self'; frame-src 'self' https://www.google.com https://ticket.iov-ilmenau.de; worker-src; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'self'; manifest-src 'self';">
+    <title>Fahrplan | IOV Ilmenau</title>
+    <meta property="og:title" content="Fahrplan | IOV Ilmenau"/>
+    <meta property="og:description" content=""/>
+    <link rel="stylesheet" type="text/css" href="/static/iovr/tippyjs/themes/light.css">
+    <link rel="stylesheet" href="/static/iovr/jquery.fancybox.min.css"/>
+<link rel="stylesheet" type="text/css" href="/static/iovr/lightslider/css/lightslider.css">
+<link rel="stylesheet" href="/static/iovr/timepicker/css/timepicki.css">
+<link  href="/static/iovr/datepicker/datepicker.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/iovr/16156096513.css?189694454EB">
+</head>
+  <body>
+        <div id="mobile-navigation">
+      <div id="nav-content">
+        <div id="mnav-head">
+          <div id="manv-logo"><img src="/static/iovr/logo-iov.png" alt=""></div>
+          <div id="nav-close" onclick="closeNavigation();"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div style="clear: both;"></div>
+        </div>
+        <div id="mnav-body">
+          <nav>
+            <ul>
+              <li class="mnavli0"><a class="manv0" href="https://www.iov-ilmenau.de/">Startseite</a></li>
+              <li class="mnavli0"><a class="manv0" href="/aktuelles/">Aktuelles</a></li>
+              <li class="mnavli0 mnavsubmenu">
+                <a class="manv0" href="/allgemein/">Allgemein</a>
+                <span class="show-sub-nav showsub1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="mnavul1">
+                  <li class="mnavli1">
+                    <a class="manv1" href="/allgemein/unternehmen/">Unternehmen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/allgemein/sitemap/">Sitemap</a>
+                    
+                  </li>
+                </ul>
+              </li><li class="mnavli0 mnavsubmenu">
+                <a class="manv0" href="/fahrplan/">Fahrplan</a>
+                <span class="show-sub-nav showsub1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="mnavul1">
+                  <li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/fahrplan/">Fahrplan</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/haltestellen/">Haltestellen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/haltestellen-karte/">Haltestellen Karte</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/linien-liniennetzplan/">Linien / Liniennetzplan</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/fahrplandruck/">Fahrpl&auml;ne zum Drucken</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/jgeypm9u/">Ausfl&uuml;ge mit Bus und Bahn</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/rennsteigbus/">RENNSTEIG erFAHREN</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/fahrplan/schwarzatalerfahren/">SCHWARZATAL erFAHREN</a>
+                    
+                  </li>
+                </ul>
+              </li><li class="mnavli0 mnavsubmenu">
+                <a class="manv0" href="/tickets-und-preise/">Tickets / Preise</a>
+                <span class="show-sub-nav showsub1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="mnavul1">
+                  <li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/rennsteig-ticket/">RENNSTEIG-Ticket</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/mobitickets/">Mobilit&auml;tstickets</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/schuelerferienticket/">Sch&uuml;lerferienticket</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/tarifauskunft/">Tarifauskunft</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/tarifbedingungen/">Tarifbedingungen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/befoerderungsbedingungen/">Bef&ouml;rderungsbedingungen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/berechtigungskosten-mobitickets/">Berechtigungskarten</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/tickets-und-preise/deutschlandticket/">Deutschlandticket</a>
+                    
+                  </li>
+                </ul>
+              </li><li class="mnavli0 mnavsubmenu">
+                <a class="manv0" href="/mietomnibusverkehr/">Mietomnibusverkehr</a>
+                <span class="show-sub-nav showsub1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="mnavul1">
+                  <li class="mnavli1">
+                    <a class="manv1" href="/mietomnibusverkehr/anfragen/">Anfragen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/mietomnibusverkehr/flotte/">Flotte</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/mietomnibusverkehr/agbs/">AGB&acute;s</a>
+                    
+                  </li>
+                </ul>
+              </li><li class="mnavli0 mnavsubmenu">
+                <a class="manv0" href="/service/">Service</a>
+                <span class="show-sub-nav showsub1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="mnavul1">
+                  <li class="mnavli1">
+                    <a class="manv1" href="/service/servicecenter/">Servicecenter</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/fundsachen/">Fundsachen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/offene-stellen/">Offene Stellen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/werbung-an-bussen/">Werbung an Bussen</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/ihre-meinung/">Ihre Meinung</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/omni/">Omni</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/schlichtungsstelle/">Schlichtungsstelle</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/hinweisgeberschutzgesetz/">Hinweisgeberschutzgesetz</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/service/faq-haeufig-gestellte-fragen/">FAQ - h&auml;ufig gestellte Fragen</a>
+                    
+                  </li>
+                </ul>
+              </li><li class="mnavli0 mnavsubmenu">
+                <a class="manv0" href="/kontakt/">Kontakt</a>
+                <span class="show-sub-nav showsub1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="mnavul1">
+                  <li class="mnavli1">
+                    <a class="manv1" href="/kontakt/ansprechpartner/">Ansprechpartner</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/kontakt/anfahrt/">Anfahrt</a>
+                    
+                  </li><li class="mnavli1">
+                    <a class="manv1" href="/kontakt/kontaktformular/">Kontaktformular</a>
+                    
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="mnavli0"><a class="manv0" href="/impressum/">Impressum</a></li>
+              <li class="mnavli0"><a class="manv0" href="/datenschutzerklaerung/">Datenschutzerklärung</a></li>
+              <li class="mnavli0"><a class="manv0" href="/login/">Login</a></li>
+            </ul>
+            <div id="ios-menu-korrektur"></div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <header>
+  <div id="head-mobile">
+  <div id="headm-table">
+    <div id="headm-logo">
+      <div id="mobile-logo"><a href="https://www.iov-ilmenau.de/"><img src="/static/iovr/logo-iov.png" alt="Logo IOV"></a></div>
+    </div>
+    <div id="headm-menu" onclick="showMobileMenu();">
+      <div id="mobile-menu-button"><i class="fas fa-bars"></i></div>
+    </div>
+  </div>
+</div>
+        <div id="head">
+        <div id="telefon-und-suche">
+          <div id="websuche">
+            <div id="suche-btn">
+              <span id="suche">
+                <span id="suche-icon"><i class="fas fa-search" data-fa-transform="flip-h"></i></span>
+              </span>
+            </div>
+            <div id="suche-slider">
+              <div id="suche-form">
+                <div id="suche-form-felder">
+                  <form action="/suche/suchen.act" name="searchform">
+                    <div id="suche-felder-tbl">
+                      <div class="suche-felder-cell">
+                        <input type="text" name="search" id="search" class="ffeld" value="">
+                      </div>
+                      <div class="suche-felder-cell">
+                        <div id="suche-senden"><div id="suche-pfeil"></div></div>
+                      </div>
+                    </div>
+                  </form>
+                  <div style="clear: both;"></div>
+                </div>
+              </div>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+          <div id="telefon">
+            
+            <div id="login-link">
+              <a href="/login/"><img src="/static/iovr/login.png" alt=""></a>
+            </div>
+            
+            <div id="telefon-icon"><a href="tel:0367788890"><i class="fas fa-phone" data-fa-transform="flip-h"></i></a></div>
+            <div id="telefon-nummer"><a href="tel:0367788890"><span>03677 8889-0</span></a></div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div id="logo-und-navigation">
+          <div class="wrap">
+            <div id="logo"><a href="https://www.iov-ilmenau.de/"><img src="/static/iovr/logo-iov.png" alt="Logo IOV"></a></div>
+            <div id="navigation">
+              
+                <nav>
+                  <ul>
+                    <li class="mainli-direkt">
+                      <a href="/aktuelles/" class="maintext-direkt">Aktuelles</a>
+                      <div class="clear"></div>
+                    </li>
+                    
+                      <li class="mainli" id="nav1615601419B">
+                        <a href="/allgemein/" class="maintext">Allgemein</a>
+                        <div class="clear"></div>
+                        
+                          <div class="submenu" style="display:none; overflow:visible !important;">
+                            <div class="submenu-arrow"></div>
+                            <ul>
+                              
+                                <li class="sub1li"><a href="/allgemein/unternehmen/" class="subtext">Unternehmen</a></li>
+                              
+                                <li class="sub1li"><a href="/allgemein/sitemap/" class="subtext">Sitemap</a></li>
+                              
+                            </ul>
+                          </div>
+                        
+                      </li>
+                    
+                      <li class="mainli" id="nav1615601E44F">
+                        <a href="/fahrplan/" class="maintext">Fahrplan</a>
+                        <div class="clear"></div>
+                        
+                          <div class="submenu" style="display:none; overflow:visible !important;">
+                            <div class="submenu-arrow"></div>
+                            <ul>
+                              
+                                <li class="sub1li"><a href="/fahrplan/fahrplan/" class="subtext">Fahrplan</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/haltestellen/" class="subtext">Haltestellen</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/haltestellen-karte/" class="subtext">Haltestellen Karte</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/linien-liniennetzplan/" class="subtext">Linien / Liniennetzplan</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/fahrplandruck/" class="subtext">Fahrpl&auml;ne zum Drucken</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/jgeypm9u/" class="subtext">Ausfl&uuml;ge mit Bus und Bahn</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/rennsteigbus/" class="subtext">RENNSTEIG erFAHREN</a></li>
+                              
+                                <li class="sub1li"><a href="/fahrplan/schwarzatalerfahren/" class="subtext">SCHWARZATAL erFAHREN</a></li>
+                              
+                            </ul>
+                          </div>
+                        
+                      </li>
+                    
+                      <li class="mainli" id="nav161560367DE">
+                        <a href="/tickets-und-preise/" class="maintext">Tickets / Preise</a>
+                        <div class="clear"></div>
+                        
+                          <div class="submenu" style="display:none; overflow:visible !important;">
+                            <div class="submenu-arrow"></div>
+                            <ul>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/rennsteig-ticket/" class="subtext">RENNSTEIG-Ticket</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/mobitickets/" class="subtext">Mobilit&auml;tstickets</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/schuelerferienticket/" class="subtext">Sch&uuml;lerferienticket</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/tarifauskunft/" class="subtext">Tarifauskunft</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/tarifbedingungen/" class="subtext">Tarifbedingungen</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/befoerderungsbedingungen/" class="subtext">Bef&ouml;rderungsbedingungen</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/berechtigungskosten-mobitickets/" class="subtext">Berechtigungskarten</a></li>
+                              
+                                <li class="sub1li"><a href="/tickets-und-preise/deutschlandticket/" class="subtext">Deutschlandticket</a></li>
+                              
+                            </ul>
+                          </div>
+                        
+                      </li>
+                    
+                      <li class="mainli" id="nav1615604B65B">
+                        <a href="/mietomnibusverkehr/" class="maintext">Mietomnibusverkehr</a>
+                        <div class="clear"></div>
+                        
+                          <div class="submenu" style="display:none; overflow:visible !important;">
+                            <div class="submenu-arrow"></div>
+                            <ul>
+                              
+                                <li class="sub1li"><a href="/mietomnibusverkehr/anfragen/" class="subtext">Anfragen</a></li>
+                              
+                                <li class="sub1li"><a href="/mietomnibusverkehr/flotte/" class="subtext">Flotte</a></li>
+                              
+                                <li class="sub1li"><a href="/mietomnibusverkehr/agbs/" class="subtext">AGB&acute;s</a></li>
+                              
+                            </ul>
+                          </div>
+                        
+                      </li>
+                    
+                      <li class="mainli" id="nav16156058C10">
+                        <a href="/service/" class="maintext">Service</a>
+                        <div class="clear"></div>
+                        
+                          <div class="submenu" style="display:none; overflow:visible !important;">
+                            <div class="submenu-arrow"></div>
+                            <ul>
+                              
+                                <li class="sub1li"><a href="/service/servicecenter/" class="subtext">Servicecenter</a></li>
+                              
+                                <li class="sub1li"><a href="/service/fundsachen/" class="subtext">Fundsachen</a></li>
+                              
+                                <li class="sub1li"><a href="/service/offene-stellen/" class="subtext">Offene Stellen</a></li>
+                              
+                                <li class="sub1li"><a href="/service/werbung-an-bussen/" class="subtext">Werbung an Bussen</a></li>
+                              
+                                <li class="sub1li"><a href="/service/ihre-meinung/" class="subtext">Ihre Meinung</a></li>
+                              
+                                <li class="sub1li"><a href="/service/omni/" class="subtext">Omni</a></li>
+                              
+                                <li class="sub1li"><a href="/service/schlichtungsstelle/" class="subtext">Schlichtungsstelle</a></li>
+                              
+                                <li class="sub1li"><a href="/service/hinweisgeberschutzgesetz/" class="subtext">Hinweisgeberschutzgesetz</a></li>
+                              
+                                <li class="sub1li"><a href="/service/faq-haeufig-gestellte-fragen/" class="subtext">FAQ - h&auml;ufig gestellte Fragen</a></li>
+                              
+                            </ul>
+                          </div>
+                        
+                      </li>
+                    
+                      <li class="mainli" id="nav161560791C7">
+                        <a href="/kontakt/" class="maintext">Kontakt</a>
+                        <div class="clear"></div>
+                        
+                          <div class="submenu" style="display:none; overflow:visible !important;">
+                            <div class="submenu-arrow"></div>
+                            <ul>
+                              
+                                <li class="sub1li"><a href="/kontakt/ansprechpartner/" class="subtext">Ansprechpartner</a></li>
+                              
+                                <li class="sub1li"><a href="/kontakt/anfahrt/" class="subtext">Anfahrt</a></li>
+                              
+                                <li class="sub1li"><a href="/kontakt/kontaktformular/" class="subtext">Kontaktformular</a></li>
+                              
+                            </ul>
+                          </div>
+                        
+                      </li>
+                    
+                    <li id="nav-top-100"></li>
+                  </ul>
+                </nav>
+              
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+</header>
+    <main>
+      <div id="inhalte">
+
+        <div id="content">
+          <div id="inhalt-left">
+
+						<div id="navpunkt-namen">
+  
+    <div id="nav-name-small" class="hyphenate"><h2>Fahrplan</h2></div>
+    <div id="nav-name-trenner"><i class="fas fa-circle"></i></div>
+    <div id="nav-name-big" class="hyphenate"><h1>Fahrplan</h1></div>
+    
+  
+</div>
+            
+            <article>
+                              
+                
+                  
+                  <!-- Heiligabend/Silvester -->
+                  
+                  <div class="inh-abs-text">
+                    
+                    
+                    
+                    
+                    <div ><h2>Heiligabend und Silvester verkehren die Busse wie an Samstagen!</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p></div>
+                    <div style="clear:both;"></div>
+                  </div>
+                
+              
+            </article>
+            
+            
+            <div id="fahrplan-content-desktop">
+            	
+
+
+
+  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+      <td><a href="javascript:history.back();">zur Übersicht</a></td>
+      <td align="right"><!-- Fahrplan gültig bis 10.03.2024 --></td>
+    </tr>
+    <tr><td colspan="2"><img src="/static/iov/leer.gif" alt="" width="1" height="10"></td></tr>
+    <tr>
+      <td><b>Liniennummer 364 <!-- <a href="/iov/fahrplantab/Linie364.pdf" target="_blank">(Download PDF)</a> --> </b></td>
+      <td align="right" valign="top"><b>Montag bis Freitag</b></td>
+    </tr>
+    <tr><td colspan="2"><b>(BAUFAHRPLAN Ilmenau - Heyda - Elgersburg)</b></td></tr>
+    <tr><td colspan="2"><img src="/static/iov/leer.gif" alt="" width="1" height="20"></td></tr>
+  </table>
+
+  <table cellspacing="0" cellpadding="0" border="0" class="fahrplanzeiten">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="3" border="0">
+          <tr>
+            <td class="stationsnamen" height="40">Station</td>
+          </tr>
+          <tr><td height="19px"></td></tr>
+          <tr class="stationsnamen"><td height="17px">Fahrt</td></tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Ilmenau Krankenhausstraße</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Ilmenau Busbahnhof</span><a href="/busbahnhoefe-plaene/" class="tooltip" title="Zu dieser Haltestelle haben wir einen Lageplan für Sie hinterlegt."><img src="/static/iov/lageplan.gif" border="0" alt="Lageplan zu dieser Haltestelle" style="padding-left:2px;"></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Ilmenau Technikum</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Ilmenau Unterpörlitzer Straße</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Ilmenau Ziolkowskistraße</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Oberpörlitz Am Hang</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Oberpörlitz</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Unterpörlitz</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Unterpörlitz R.-Luxemburg-Platz</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Heyda Auf der Heide</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Heyda Brauhausgasse</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Martinroda Heydaer Straße</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Martinroda Schule</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Martinroda</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Neusiß Abzweig Angelroda</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Angelroda</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Angelroda Siedlung</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Geraberg Ohrdrufer Straße</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Geraberg Schule</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Geraberg Neubau</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Arlesberg Geraer Straße</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Arlesberg Elg. Str.</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="stationsnamen">
+              <span style="white-space: nowrap;">Elgersburg Bahnhofstr.</span>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+
+    <td valign="top" class="zeiten-spalte" style="background-color: rgba(109, 172, 106, 0.15);">
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F1
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:18</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:20</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:22</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:24</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:26</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:27</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:30</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:31</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:35</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:36</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:41</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:43</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:46</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:49</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >05:51</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" >
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F3
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:38</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:40</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:42</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:45</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:46</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:50</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:51</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:56</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:57</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:59</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:02</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:05</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:07</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:12</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:13</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:14</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:16</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:17</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:20</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" style="background-color: rgba(109, 172, 106, 0.15);">
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F5
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:46</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:48</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:50</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:52</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:54</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:55</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:58</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >06:59</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:03</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:04</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" >
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F7
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:30</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:32</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:34</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:37</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:38</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:42</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:43</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:48</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >07:49</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" style="background-color: rgba(109, 172, 106, 0.15);">
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F9
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:20</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:22</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:24</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:26</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:28</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:29</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:32</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:33</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:37</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:38</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:43</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:45</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:48</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:51</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:53</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:58</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >09:59</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >10:00</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" >
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F11
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:40</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:42</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:44</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:46</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:48</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:49</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:52</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:53</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:57</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >11:58</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >12:03</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >12:05</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >12:08</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >12:11</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >12:13</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" style="background-color: rgba(109, 172, 106, 0.15);">
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F15
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:28</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:35</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:37</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:39</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:41</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:43</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:44</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:47</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:48</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:52</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:53</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:58</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >13:59</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:01</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:04</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:07</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:09</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:14</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:15</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:16</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:18</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:19</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >14:22</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" >
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F17
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:10</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:12</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:15</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:18</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:20</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:25</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:26</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:27</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:29</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:30</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:33</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" style="background-color: rgba(109, 172, 106, 0.15);">
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F19
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:30</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:32</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:34</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:36</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:38</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:39</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:42</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:43</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:47</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:48</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:53</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:54</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:56</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >15:59</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:02</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:04</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:09</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:10</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:11</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:13</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:14</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >16:17</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    <td valign="top" class="zeiten-spalte" >
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr style="">
+
+          <td align="center" height="40" class="tooltip" title="Diese Fahrt verkehrt Mo-Fr (ohne 24.12. und 31.12.)">
+            <span style="white-space: nowrap;">Info</span>
+          </td>
+
+        </tr>
+
+        <tr><td height="19px"></td></tr>
+
+<tr>
+    <td align="center"  height="17px">
+        F21
+    </td>
+</tr>
+
+
+
+
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td align="center">&nbsp;</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:00</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td align="center">|</td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:04</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:05</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:08</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:09</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:13</span>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="fp_zeit tooltip" >
+             <span >18:14</span>
+           </td>
+         </tr>
+
+      </table>
+    </td>
+
+    </tr>
+  </table>
+
+            </div>
+            <div id="fahrplan-content-mobile">
+              <div class="inh-abs-text"><p style="text-align: justify;">Auf mobilen Ger&auml;ten mit kleinen Bildschirmen lassen sich unsere komplexen Fahrpl&auml;ne nur schlecht darstellen, wir w&uuml;rden Ihnen daher unsere Fahrplanauskunft empfehlen.</p></div>
+              <div class="mobile-info-button">
+                <a href="#" id="jump-fahrplan">zur Fahrplanauskunft</a>
+              </div>
+            </div>
+						
+            <div id="inhalt-left-abstand"></div>
+
+          </div>
+          <div id="infoboxen">
+            <aside>
+              <div id="ifb-hintergrund">
+                								<div class="ifb ifb-hover">
+                  <div class="ifb-content">
+                    <div class="ifb-headline hyphenate"><h3>Automatisiertes Fahren</h3></div>
+                    <div class="ifb-headline"><img src="/static/iovr/logo-efre-eu.jpg" alt="Logo EFRE-EU"></div>
+                    <div class="ifb-inhalte">
+                      <p>Projekt CAMIL</p>
+                      <p>Automatisierte Schuttlebusse in Ilmenau</p>
+                      <p>Weitere Informationen erhalten Sie auf<br><a href="https://www.camil-ilmenau.de" target="_blank">www.camil-ilmenau.de</a></p>
+                  	</div>
+                  </div>
+                </div>
+                
+								
+                <div class="ifb ifb-hover" id="ifb-fahrplanauskunft"> <!-- class="ifb-hover-open" für Hover und dann offen bleiben -->
+      					<div class="ifb-content">
+                    <div class="ifb-headline hyphenate"><h3>Deutschlandticket</h3></div>
+                    <div class="ifb-inhalte">
+                      <div id="ifb-fahrplanauskunft">
+                        <p style="text-align: center;">Mit einem Ticket durch Deutschland reisen.</p>
+                        <div style="text-align: center;">
+                          <a href="/anmeldung-deutschlandticket/" style="background-color: #fff; color: #f9b800; box-sizing: border-box; border: 1px solid #487d49; padding: 4px 15px; font-size: 13pt; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; display: inline-block;">Anmelden</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                                
+                
+                
+								<div class="ifb ifb-hover">
+                  <div class="ifb-content">
+                    <div class="ifb-headline hyphenate"><h3>Schnellkontakt</h3></div>
+                    <div class="ifb-inhalte">
+                      <p>IOV Omnibusverkehr GmbH Ilmenau</p>
+                      <p>Unterpörlitzer Straße 15b<br>98693 Ilmenau</p>
+                      <p>Telefon: +49 (0) 3677 / 8889 - 0<br>Fax: +49 (0) 3677 / 8889 - 88</p>
+                      <p>eMail: <a href="mailto:info@iov-ilmenau.de">info@iov-ilmenau.de</a><br>Internet: <a href="https://www.iov-ilmenau.de">www.iov-ilmenau.de</a></p>
+                      <p>Öffnungszeiten sind von Montag - Freitag<br>von 07:30 - 16:00 Uhr. (außer an ges. Feiertagen)</p>
+                  	</div>
+                  </div>
+                </div>
+                
+								
+                <div class="ifb ifb-hover" id="ifb-fahrplanauskunft"> <!-- class="ifb-hover-open" für Hover und dann offen bleiben -->
+      					<div class="ifb-content">
+                    <div class="ifb-headline hyphenate"><h3>Fahrplanauskunft</h3></div>
+                    <div class="ifb-inhalte">
+                      <div id="ifb-fahrplanauskunft">
+<!--
+                        <form name="HafasQueryForm" action="http://routenplaner.bus-bahn-thueringen.de/bin/query.exe/dn?L=vs_bbt&" method="post" target="_blank">
+                          
+                          <div class="ifb-form-row">
+                            <label for="hfsFrom">Abfahrt</label>
+                            <input type="hidden" name="ST" value="255">
+                            <input type="text" name="S" id="hfsFrom" value="" placeholder="Ort, Haltestelle oder Adresse">
+                            <input type="hidden" id="hfsFromID" name="S0ID">
+                          </div>
+
+                          <div class="ifb-form-row">
+                            <label for="hfsTo">Ziel</label>
+                            <input type="hidden" name="ZT" value="255">
+                            <input type="text" name="Z" id="hfsTo" value="" placeholder="Ort, Haltestelle oder Adresse">
+                            <input type="hidden" id="hfsToID" name="Z0ID">
+                          </div>
+
+                          <div class="ifb-form-row">
+                            <div class="ifb-form-table">
+                            
+                              <div class="tfb-f-tr">
+                                <div class="ifb-f-td ifb-f-td-label"><label for="ifb-fa-datum">Am:</label></div>
+                                <div class="ifb-f-td">
+                                  <input type="text" name="date" id="ifb-fa-datum" class="datepicker" value="03.04.2024">
+                                </div>
+                              </div>
+                              
+                              <div class="tfb-f-tr">
+                                <div class="ifb-f-td ifb-f-td-label"><label for="ifb-fa-time">um:</label></div>
+                                <div class="ifb-f-td">
+                                  <input type="text" name="time" id="ifb-fa-time" class="timepicker" value="17:21">
+                                </div>
+                              </div>
+
+
+                              <div class="tfb-f-tr">
+                                <div class="ifb-f-td ifb-f-td-label"></div>
+                                <div class="ifb-f-td">
+                                  <div class="ifb-fa-radio">
+                                    <input type="radio" name="timesel" value="depart" checked> <label>Abfahrtszeit</label>
+                                  </div>
+                                  <div class="ifb-fa-radio">
+                                    <input type="radio" name="timesel" value="arrive"> <label>Ankunftszeit</label>
+                                  </div>
+                                </div>
+                              </div>
+															
+                              <input type="hidden" name="journeyProducts" value="312">
+                              
+                              <div class="tfb-f-tr">
+                                <div class="ifb-f-td ifb-f-td-label"></div>
+                                <div class="ifb-f-td">
+                                  <input type="submit" name="start" value="Suchen">
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+
+                        </form>
+                        -->   
+                        <p style="text-align: center;">Hier gelangen Sie zur Fahrplanauskunft von Bus &amp; Bahn Thüringen.</p>
+                        <div style="text-align: center;">
+                          <a href="http://routenplaner.bus-bahn-thueringen.de/bin/query.exe/dn?L=vs_bbt&" target="_blank" style="background-color: #fff; color: #f9b800; box-sizing: border-box; border: 1px solid #487d49; padding: 4px 15px; font-size: 13pt; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; display: inline-block;">Auskunft BBT</a>
+                        </div>
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+								
+                	
+
+
+                <div class="ifb">
+                  <div class="ifb-content">
+                    <div class="ifb-headline hyphenate"><h3>Verkehrsstörungen</h3></div>
+                    <div class="ifb-inhalte">
+                      <div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie 301 Hinfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 04.03.2024 bis voraussichtlich 28.06.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Durch umfangreiche Kanalbauarbeiten in Elgersburg, kommt es zu Beeintr&auml;chtigungen im Linienverkehr.</p>
+<p><strong>Bitte beachten Sie daher den </strong><em><em><strong><a title="20240304_301_BAU_Ilmenau...pdf" href="/files/18E13678340/20240304_301_BAU_Ilmenau-Gr%C3%A4fenroda.pdf">BAUFAHRPLAN</a>.</strong> </em></em></p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie 301 Rückfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 04.03.2024 bis voraussichtlich 28.06.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Durch umfangreiche Kanalbauarbeiten in Elgersburg, kommt es zu Beeintr&auml;chtigungen im Linienverkehr.</p>
+<p><strong>Bitte beachten Sie daher den </strong><em><em><strong><a title="20240304_301_BAU_Ilmenau...pdf" href="/files/18E13678340/20240304_301_BAU_Ilmenau-Gr%C3%A4fenroda.pdf">BAUFAHRPLAN</a>.</strong> </em></em></p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie 304 Hinfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 11.03.2024 bis voraussichtlich 05.04.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund einer Stra&szlig;ensperrung zwischen Kahlert und Altenfeld verkehrt die Linie 304 nach einem <a title="20240311_304_BAU_Ilmenau...pdf" href="/files/18E1CEDFC2B/20240311_304_BAU_Ilmenau-Gro%C3%9Fbreitenbach.pdf"><em><strong>BAUFAHRPLAN</strong></em></a>.</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie 304 Rückfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 11.03.2024 bis voraussichtlich 05.04.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund einer Stra&szlig;ensperrung zwischen Kahlert und Altenfeld verkehrt die Linie 304 nach einem <a title="20240311_304_BAU_Ilmenau...pdf" href="/files/18E1CEDFC2B/20240311_304_BAU_Ilmenau-Gro%C3%9Fbreitenbach.pdf"><em><strong>BAUFAHRPLAN</strong></em></a>.</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie 305 Hinfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 25.03.2024 bis voraussichtlich 30.10.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten in Gr&auml;finau-Angstedt und damit verbundener Umleitung verkehrt die Linie 305 nach einen <a title="20240325_305_BAU_Ilmenau...pdf" href="/files/18E5B4BF546/20240325_305_BAU_Ilmenau-Gehren.pdf"><em><strong>BAUFAHRPLAN</strong></em></a>. Leider verl&auml;ngern sich die Reisezeiten auf dieser Linie.</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie 305 Rückfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 25.03.2024 bis voraussichtlich 30.10.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten in Gr&auml;finau-Angstedt und damit verbundener Umleitung verkehrt die Linie 305 nach einen <a title="20240325_305_BAU_Ilmenau...pdf" href="/files/18E5B4BF546/20240325_305_BAU_Ilmenau-Gehren.pdf"><em><strong>BAUFAHRPLAN</strong></em></a>. Leider verl&auml;ngern sich die Reisezeiten auf dieser Linie.</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie C Hinfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 06.03.2024 bis voraussichtlich 29.11.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund der <strong>Sperrung der Oehrenst&ouml;cker Stra&szlig;e</strong> kommt es zu Ver&auml;nderungen in den Abfahrzeiten und der Haltestellenbedienung.</p>
+<p>Den g&uuml;ltigen Fahrplan finden Sie <em><a title="20240306_C_BAU_Unterp&ouml;rl...pdf" href="/files/18E09859B64/20240306_C_BAU_Unterp%C3%B6rlitz-Ehrenberg%20Ost.pdf"><strong>hier</strong> </a></em>im PDF-Format.</p>
+<p>Bitte informieren Sie sich vor Fahrtantritt rechtzeitig!</p>
+<p>Wir bitten f&uuml;r diese Ma&szlig;nahme um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Linie C Rückfahrt</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+                            <div><b>Zeitraum:</b> 06.03.2024 bis voraussichtlich 29.11.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund der <strong>Sperrung der Oehrenst&ouml;cker Stra&szlig;e</strong> kommt es zu Ver&auml;nderungen in den Abfahrzeiten und der Haltestellenbedienung.</p>
+<p>Den g&uuml;ltigen Fahrplan finden Sie <em><a title="20240306_C_BAU_Unterp&ouml;rl...pdf" href="/files/18E09859B64/20240306_C_BAU_Unterp%C3%B6rlitz-Ehrenberg%20Ost.pdf"><strong>hier</strong> </a></em>im PDF-Format.</p>
+<p>Bitte informieren Sie sich vor Fahrtantritt rechtzeitig!</p>
+<p>Wir bitten f&uuml;r diese Ma&szlig;nahme um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Altenfeld Forsthaus</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 11.03.2024 bis voraussichtlich 28.03.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Baumf&auml;llarbeiten zwischen Kahlert und Altenfeld kann diese Haltestelle nicht bedient werden.</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 304 | Großbreitenbach - Altenfeld - Neustadt - Gehren - Ilmenau</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 304 | Ilmenau - Gehren - Neustadt - Altenfeld - Großbreitenbach</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Gräfinau Schule</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 25.03.2024 bis voraussichtlich 30.10.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten in Gr&auml;finau-Angstedt und damit verbundener Umleitung kann die Haltestelle "Gr&auml;finau, Schule" nicht bedient werden. <em><strong>Als Ersatz wird eine Haltestelle beim Zebrastreifen eingerichtet.</strong></em></p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 305 | Ilmenau - Eichicht - Langewiesen/Oehrenstock - Gräfinau - Gehren</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 305 | Gehren - Gräfinau - Eichicht - Langewiesen/Oehrenstock - Ilmenau</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 306 | Ilmenau - Gehren - Königsee</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 320 | Gräfinau - Stadtilm</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 320 | Stadtilm - Gräfinau</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Großbreitenbach Bahnhof</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 18.03.2024 bis voraussichtlich 30.04.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten k&ouml;nnen diese Haltestellen nicht bedient werden. Nutzen Sie als Ersatz bitte die Haltestelle "Gro&szlig;breitenbach, Ilmenauer Stra&szlig;e".</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 303 | Ilmenau - Gehren - Herschdorf - Böhlen - Großbreitenbach</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 303 | Großbreitenbach - Böhlen - Herschdorf - Gehren - Ilmenau</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 304 | Großbreitenbach - Altenfeld - Neustadt - Gehren - Ilmenau</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 304 | Ilmenau - Gehren - Neustadt - Altenfeld - Großbreitenbach</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Langewiesen Rathaus</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 22.03.2024 bis voraussichtlich 24.03.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund des Ostermarktes in Langewiesen kann diese Haltestelle <em><strong>ab 22.03.2024 um ca. 20:00 Uhr</strong></em> nicht bedient werden. Nutzen Sie als Ersatz die Haltestelle "Langewiesen, In den Folgen".</p>
+<p>Wir bitte um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 304 | Großbreitenbach - Altenfeld - Neustadt - Gehren - Ilmenau</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 304 | Ilmenau - Gehren - Neustadt - Altenfeld - Großbreitenbach</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 305 | Ilmenau - Eichicht - Langewiesen/Oehrenstock - Gräfinau - Gehren</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 305 | Gehren - Gräfinau - Eichicht - Langewiesen/Oehrenstock - Ilmenau</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Langewiesen Thermos</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 22.03.2024 bis voraussichtlich 24.03.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund des Ostermarktes in Langewiesen kann diese Haltestelle<em><strong> ab 22.03.2024 um ca. 20:00 Uhr</strong> </em>nicht bedient werden. Nutzen Sie als Ersatz die Haltestelle "Langewiesen, In den Folgen".</p>
+<p>Wir bitte um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 305 | Ilmenau - Eichicht - Langewiesen/Oehrenstock - Gräfinau - Gehren</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 305 | Gehren - Gräfinau - Eichicht - Langewiesen/Oehrenstock - Ilmenau</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Osthausen Schule</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 29.01.2024 bis voraussichtlich 31.12.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund einer Sperrung der &bdquo;Schulstra&szlig;e&ldquo;, wird diese Haltestelle ab dem <strong>29.01.2024</strong> in die Stra&szlig;e &bdquo;An der Kirche&ldquo; verlegt. Linie 362 Fahrt 3 verkehrt 06:45 Uhr lediglich ab der Haltestelle &bdquo;Osthausen&ldquo;. Fahrten der Linie 363 halten ebenfalls an der Haltestelle &bdquo;Osthausen&ldquo;.</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 353 | Osthausen - Arnstadt</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 353 | Arnstadt - Osthausen</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 362 | Riechheim/Osthausen - Stadtilm</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 362 | Stadtilm - Osthausen</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 363 | Riechheim/Stadtilm - Alkersleben - Arnstadt</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 363 | Arnstadt - Alkersleben - Riechheim/Stadtilm</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Plaue Ilmenauer Straße</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 04.03.2024 bis voraussichtlich 15.06.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund der Vollsperrung der Ortsdurchfahrt in Plaue kann diese Haltestelle durch Linie 302 nicht bedient werden. Nutzen Sie als Ersatz die Haltestelle "Plaue, Postplatz".</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Schmiedefeld Schule</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 18.03.2024 bis voraussichtlich 02.04.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten verkehren einzelne Leistungen der Linie 300 ab der Haltestelle "Schmiedfeld, Gartenstra&szlig;e".</p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 300 | Ilmenau - Schmiedefeld - (300.1 Vesser-Frauenwald) - Frauenwald / Suhl</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 300 | Suhl / Frauenwald - (300.1 Frauenwald-Vesser) - Schmiedefeld - Ilmenau</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 307 | Suhl/Vesser - Frauenwald - Neustadt - Großbreitenbach</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Wümbach</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 25.03.2024 bis voraussichtlich 30.10.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten in Gr&auml;finau-Angstedt und damit verbundener Umleitung kann die Haltestelle "W&uuml;mbach" nicht bedient werden. <em><strong>Als Ersatz werden Haltestellen bei der Feuerwehr eingerichtet.</strong></em></p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 305 | Ilmenau - Eichicht - Langewiesen/Oehrenstock - Gräfinau - Gehren</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 305 | Gehren - Gräfinau - Eichicht - Langewiesen/Oehrenstock - Ilmenau</div>
+
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="acc-header">
+                            <div class="acc-header-icon"><i class="fas fa-plus-circle"></i></div>
+                            <div class="acc-heder-text"><h3>Wümbach Gewerbegebiet</a></h3></div>
+                          </div>
+                          <div class="acc-content">
+
+                            <div><b>Zeitraum:</b> 25.03.2024 bis voraussichtlich 30.10.2024</div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Grund:</b> <p>Aufgrund von Bauarbeiten in Gr&auml;finau-Angstedt und damit verbundener Umleitung kann die Haltestelle "W&uuml;mbach, Gewerbegebiet" nicht bedient werden. <em><strong>Als Ersatz werden Haltestellen bei der Feuerwehr eingerichtet.</strong></em></p>
+<p>Wir bitten um Verst&auml;ndnis.</p>
+<p>Ihr IOV-Team.</p></div>
+                            <div style="width: 100%; height: 15px;"></div>
+                            <div><b>Diese Störung beeinträchtigt folgende Linien:</b></div>
+
+                            <div>Linie: 305 | Ilmenau - Eichicht - Langewiesen/Oehrenstock - Gräfinau - Gehren</div>
+
+                            <div style="width: 100%; height: 8px;"></div>
+
+                            <div>Linie: 305 | Gehren - Gräfinau - Eichicht - Langewiesen/Oehrenstock - Ilmenau</div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+
+                
+
+                <div class="clear"></div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </aside>
+          </div><!-- Infoboxen -->
+          <div class="clear"></div>
+
+
+          <div id="infoboxen-unten">
+            <aside>
+              <div id="ifbu-tabelle">
+                                <!--<div class="ifbu-td" id="ifbu-kontakt">
+                  <div id="ifbu-kontakt-inhalt">
+                    <h3>Schnellkontakt</h3>
+                    <div id="ifb-kontakt-text">
+                      <p>IOV Omnibusverkehr GmbH Ilmenau</p>
+                      <p>Unterpörlitzer Straße 15b<br>98693 Ilmenau</p>
+                      <p>Telefon: +49 (0) 3677 / 8889 - 0<br>Fax: +49 (0) 3677 / 8889 - 88</p>
+                      <p>eMail: <a href="mailto:info@iov-ilmenau.de">info@iov-ilmenau.de</a><br>Internet: <a href="https://www.iov-ilmenau.de">www.iov-ilmenau.de</a></p>
+                      <p>Öffnungszeiten sind von Montag - Freitag<br>von 07:30 - 16:00 Uhr. (außer an ges. Feiertagen)</p>
+                    </div>
+                  </div>
+                </div>-->
+                <div class="ifbu-td" id="ifbu-boxen">
+  <div id="ifbu-boxen-control">
+    <ul id="ifbu-boxen-container">
+      
+        
+  <li class="ifbu-box">
+    <a href="https://jobs-iov.de/"  class="ifbu-box-link">
+      <span class="ifbu-box-titel">Stellenangebote</span>
+      <span class="ifbu-box-overlay"></span>
+      <img src="https://www.iov-ilmenau.de/pic/185DE972D85_260x300.jpg" alt="">
+    </a>
+  </li>
+
+      
+        
+  <li class="ifbu-box">
+    <a href="/fahrplan/fahrplandruck/" target="_blank" class="ifbu-box-link">
+      <span class="ifbu-box-titel">Fahrplan</span>
+      <span class="ifbu-box-overlay"></span>
+      <img src="https://www.iov-ilmenau.de/pic/161B84A8F61_260x300.jpg" alt="">
+    </a>
+  </li>
+
+      
+        
+  <li class="ifbu-box">
+    <a href="https://www.iov-ilmenau.de/tickets-und-preise/tarifauskunft/"  class="ifbu-box-link">
+      <span class="ifbu-box-titel">Tarifauskunft</span>
+      <span class="ifbu-box-overlay"></span>
+      <img src="https://www.iov-ilmenau.de/pic/161B84AA285_260x300.jpg" alt="">
+    </a>
+  </li>
+
+      
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>
+              </div>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer>
+  <div id="footer">
+    <div id="footer-content">
+      <div id="footer-nav">
+        
+          <nav>
+            <a href="/impressum/" id="link-impressum">Impressum</a>
+            <a href="/datenschutzerklaerung/" id="link-datenschutz">Datenschutzerklärung</a>
+          </nav>
+        
+      </div>
+    </div>
+    <div id="copyright">&copy; 2024 IOV Omnibusverkehr GmbH Ilmenau. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+    
+  
+    
+    
+    
+
+    <div id="consent-banner">
+      <div id="consent-banner-center">
+        <div id="consent-banner-left">
+          <div id="consent-banner-text">
+            Auf unserer Internetseite verwenden wir Cookies und folgende Funktionalitäten, für die wir Ihre Zustimmung benötigen. Weitere Informationen erhalten Sie in unserer Datenschutzerklärung.
+          </div>
+          <div id="consent-banner-links">
+            <a href="/datenschutzerklaerung/cookies/">Cookies</a>
+            <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>
+            <a href="/impressum/">Impressum</a>
+          </div>
+          <div id="consent-banner-checkboxen">
+            <div class="content-banner-checkbox">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="cookiegm" id="coigm">
+                <label class="form-check-label" for="coigm">Google Maps</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="consent-banner-right">
+          <div id="content-banner-buttons">
+            <div class="consent-banner-button">
+              <button type="button" class="cb-btn" onclick="consentBanner(true);">Auswahl annehmen</button>
+            </div>
+            <div class="consent-banner-button">
+              <button type="button" class="cb-btn" onclick="consentBanner(false);">Ablehnen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function consentBanner(check_selection){
+        var today = new Date();
+        var expire = new Date();
+        expire.setTime(today.getTime() + 3600000*24*730);
+        document.cookie = "cookie_opt_in=true;expires="+expire.toGMTString()+";path=/";
+        if($('#coigm').prop('checked') && check_selection){ document.cookie = "cookie_opt_in_gm=true;expires="+expire.toGMTString()+";path=/"; }
+        location.reload();
+      }
+    </script>
+    <div id="consent-banner-spacer"></div>
+  
+
+    <script src="/static/iovr/jquery.3.2.1.min.js"></script>
+<script src="/static/iovr/jquery.fancybox.3.1.20.min.js"></script>
+<script defer src="/static/iovr/fontawesome-free-5.0.6/svg-with-js/js/fontawesome-all.min.js"></script>
+<script src="/static/iovr/hyphenate.js"></script>
+<script src="/static/iovr/lightslider/js/lightslider.js"></script>
+<script src="/static/iovr/timepicker/timepicki.js"></script>
+<script src="/static/iovr/datepicker/datepicker.min.js"></script>
+<script src="/static/iovr/datepicker/datepicker.de-DE.js"></script>
+<script src="/script.js"></script>
+    <script src="/static/iovr/tippyjs/tippy.all.min.js"></script>
+    <script type="text/javascript">
+      tippy('.tooltip', {
+        theme: 'light',
+        placement: 'top',
+        animation: 'scale',
+        duration: 350,
+        arrow: true
+      });
+    </script>
+  </body>
+</html>

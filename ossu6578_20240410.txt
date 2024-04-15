@@ -1,0 +1,48 @@
+Login: ossu6578
+Passwort: v81px(tH!i
+
+osamah.sufyan@tu-ilmenau.de,Fak. MN,FG Theoretische Physik 2,Tel. 017682098804
+www.tu-ilmenau.de/cs
+Please goto www.tu-ilmenau.de/hpc for more information.
+
+interactive session
+===================
+Please goto  www.tu-ilmenau.de/hpc > remote visualization. 
+
+batchjobs
+========
+Please goto  www.tu-ilmenau.de/hpc > Batch Jobs Commands
+
+software
+========
+www.tu-ilmenau.de/hpc > Software
+
+You can store Your hpc data in the following locations:
+
+1. Your homedirectory 
+==================
+/home/your_login_name
+default limit: 200 Gbyte, 2 Mio files dont go to these limits - this directory is Your entry point into our hpc infrastructure!
+snapshot backup over the last two weeks
+high IO Performance
+
+2. Your scratch directory
+=====================
+/usr/scratch4/your_login_name
+default limits: 1 Tbyte, 2 Mio files
+no backup
+high IO Performance
+
+3. Your backup/archive directory
+============================
+/data2/hpcuser/your_login_name
+default limits: 100 Gbyte, 500.000 files
+full backup last two month
+slow IO Performance
+
+annotation 1: You can check Your current limits in a terminal with the command show_user_info www.tu-ilmenau.de/hpc  > Useful Hints
+annotation 2: interactive HPC Cluster access via www.tu-ilmenau.de/vis or ssh to cslogin.tu-ilmenau.de
+annotation 3: file transfer from outside to this hpc filesystems via csdata.tu-ilmenau.de with winscp or similar tools
+
+Please contact us at hpc@tu-ilmenau.de
+

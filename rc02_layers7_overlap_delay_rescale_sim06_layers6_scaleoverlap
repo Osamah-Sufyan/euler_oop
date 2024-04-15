@@ -1,0 +1,42 @@
+#!/bin/bash
+ 
+if [ -e rc02_layers7_overlap_delay_rescale ] ## if the program exists, run the script
+then
+	echo Schicke batchjobs... ## print this in terminal (on a newline)
+	for ConcatLayers in `seq 5 1 5`; do ## seq min step max
+		for StatesPerLayer in `seq 60 1 60`; do ## seq min step max
+			for Rescale in `seq 1 1 1`; do ## seq min step max
+				for OverlapPerConcatLayer in `seq 60 1 60`; do ## seq min step max
+					for StepTo2 in `seq 1 1 11`; do ## seq min step max
+						for StepTo3 in `seq 5 1 15`; do ## seq min step max
+							for StepTo4 in `seq 8 1 18`; do ## seq min step max
+								for StepTo5 in `seq 12 1 22`; do ## seq min step max
+									lsf_file="rc02_layers7_overlap_delay_rescale_sim06_layers6_scaleoverlap.lsf" ## create a temporary .lsf file that submits commands to the cluster
+									printf "#!/bin/csh\n#BSUB -q Batch24\n#BSUB -J rc02_layers7_overlap_delay_rescale_sim06_layers6_scaleoverlap\ndate\n" > $lsf_file ## REQUIRED print this required text into .lsf file
+									commands_file="00_data/sim06_layers6_scaleoverlap_${ConcatLayers}_${StatesPerLayer}_${Rescale}_${OverlapPerConcatLayer}_${StepTo2}_${StepTo3}_${StepTo4}_${StepTo5}" ## create commands file, and name it	
+									printf "#!/bin/bash\n" > $commands_file ## REQUIRED print required text into commands file
+									for StepTo6 in `seq 16 1 26`; do ## seq min step max
+										for StepTo7 in `seq 1 1 1`; do ## seq min step max
+											printf "./rc02_layers7_overlap_delay_rescale Rtik 1e-8 ConcatLayers $ConcatLayers StatesPerLayer $StatesPerLayer Rescale $Rescale OverlapPerConcatLayer $OverlapPerConcatLayer StepTo2 $StepTo2 StepTo3 $StepTo3 StepTo4 $StepTo4 StepTo5 $StepTo5 StepTo6 $StepTo6 StepTo7 $StepTo7\n" >> $commands_file ## print commands text into commands file
+										done
+									done
+									printf "$commands_file\n" >> $lsf_file ## print name of commands file into .lsf file
+									printf "date\n" >> $lsf_file ## REQUIRED print this required text into .lsf file
+									chmod +x $commands_file ## REQUIRED make commands file an executable
+									bsub < $lsf_file ## REQUIRED submit the .lsf file to the system
+								done
+							done
+						done		
+					done
+				done
+			done
+		done
+	done
+	echo ...fertig!
+fi
+
+# COMPILE AND BASH:
+## g++ -std=c++11 -llapack -lblas rc02_layers7_overlap_delay_rescale.cpp -o rc02_layers7_overlap_delay_rescale
+## chmod +x rc02_layers7_overlap_delay_rescale_sim06_layers6_scaleoverlap
+## create a folder called "00_data"
+## ./rc02_layers7_overlap_delay_rescale_sim06_layers6_scaleoverlap

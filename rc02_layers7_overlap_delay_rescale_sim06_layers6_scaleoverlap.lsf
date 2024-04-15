@@ -1,0 +1,6 @@
+#!/bin/csh
+#BSUB -q Batch24
+#BSUB -J rc02_layers7_overlap_delay_rescale_sim06_layers6_scaleoverlap
+date
+00_data/sim06_layers6_scaleoverlap_5_60_1_60_11_15_18_22
+date
