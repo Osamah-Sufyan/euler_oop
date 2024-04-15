@@ -4,6 +4,7 @@ from matplotlib.colors import ListedColormap
 import matplotlib.colors as mcolors
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import Pool
+import itertools
 
 
 
@@ -141,10 +142,12 @@ def simulate(params):
 if __name__ == '__main__':
     # ... rest of your code ...
     mesh = 100
+    d_omeg_values = np.linspace(0.1, 1.0, mesh)  # replace 0.1 and 1.0 with your desired range
+    theta_values = np.linspace(0, 0.7*np.pi, mesh)
 
     # Parallelize simulations
-    d_omeg = 0.1  # or any other constant value
-    params = [(d_omeg, theta) for theta in np.linspace(0, 0.7*np.pi, mesh)]
+    #
+    params = list(itertools.product(d_omeg_values, theta_values))
     with Pool() as p:
         results = p.map(simulate, params)
 
@@ -153,38 +156,38 @@ if __name__ == '__main__':
 
 
     # Plot the maxima intensities with respect to theta
-    plt.figure()
-    plt.plot(thetas, maxima, 'o', label='Maxima')
-    plt.plot(thetas, minima, 'o', label='Minima')
-    plt.xlabel('theta')
-    plt.ylabel('E_abs')
-    plt.title('Maxima and Minima intensities with respect to theta')
-    plt.legend()
-    plt.show()
+    # plt.figure()
+    # plt.plot(thetas, maxima, 'o', label='Maxima')
+    # plt.plot(thetas, minima, 'o', label='Minima')
+    # plt.xlabel('theta')
+    # plt.ylabel('E_abs')
+    # plt.title('Maxima and Minima intensities with respect to theta')
+    # plt.legend()
+    # plt.show()
 
-    # mesh = 5
-    # tolerance = 1e-0
-    # # Create parameter combinations
-    # params = [(d_omeg, theta) for d_omeg in np.linspace(-0.2, 0.2, mesh) for theta in np.linspace(0, 2*np.pi, mesh)]
+    mesh = 5
+    tolerance = 1e-0
+    # Create parameter combinations
+    params = [(d_omeg, theta) for d_omeg in np.linspace(-0.2, 0.2, mesh) for theta in np.linspace(0, 2*np.pi, mesh)]
 
-    # with Pool() as p:
-    #     maxima_counts = p.map(simulate, params)
+    with Pool() as p:
+        maxima_counts = p.map(simulate, params)
 
     # # Ensure maxima_counts is defined and manipulated within the same block
-    # maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
-    # # Visualization code that uses maxima_counts should also be inside this block
-    # colors = ['yellow', 'lightblue', 'blue', 'darkblue', 'black']
-    # bounds = [-0.5, 0.5, 1.5, 8, 200]
-    # norm = mcolors.BoundaryNorm(bounds, len(colors))
-    # cmap = mcolors.ListedColormap(colors)
+    maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
+    # Visualization code that uses maxima_counts should also be inside this block
+    colors = ['yellow', 'lightblue', 'blue', 'darkblue', 'black']
+    bounds = [-0.5, 0.5, 1.5, 8, 200]
+    norm = mcolors.BoundaryNorm(bounds, len(colors))
+    cmap = mcolors.ListedColormap(colors)
 
-    # plt.imshow(maxima_counts, origin='lower', extent=[0, 2*np.pi, -0.2, 0.2], aspect='auto', cmap=cmap, norm=norm)
-    # plt.colorbar(label='Number of unique maxima')
-    # plt.xlabel('theta')
-    # plt.ylabel('d_omeg')
-    # plt.title('Number of unique maxima for different d_omeg and theta')
-    # plt.savefig('unique_maxima_heatmap_0.pdf')
-    # plt.show()
+    plt.imshow(maxima_counts, origin='lower', extent=[0, 2*np.pi, -0.2, 0.2], aspect='auto', cmap=cmap, norm=norm)
+    plt.colorbar(label='Number of unique maxima')
+    plt.xlabel('theta')
+    plt.ylabel('d_omeg')
+    plt.title('Number of unique maxima for different d_omeg and theta')
+    plt.savefig('unique_maxima_heatmap_0.pdf')
+    plt.show()
         
         
 
