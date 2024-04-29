@@ -5,6 +5,7 @@ import matplotlib.colors as mcolors
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import Pool
 import itertools
+import random
 
 
 
@@ -24,7 +25,7 @@ class LaserDESolver:
     def solve(self):
         dt = 0.05
         
-        time = np.arange(0, 10000, dt)
+        time = np.arange(0, 15000, dt)
 
         E1 = np.zeros(len(time), dtype=complex)
         E2 = np.zeros(len(time), dtype=complex)
@@ -51,8 +52,8 @@ class LaserDESolver:
 
         # Euler method to update values
         for i in range(1, len(time)):
-            dE1_dt = (1 + 1j * self.D_omeg) * N1[i-1] * E1[i-1] - 0.5 * E1[i-1] - 1j * self.d_omeg * E1[i-1] + self.K * np.exp(1j * self.theta) * E2[i-1]
-            dE2_dt = (1 + 1j * self.D_omeg) * N2[i-1] * E2[i-1] - 0.5 * E2[i-1] + 1j * self.d_omeg * E2[i-1] + self.K * np.exp(1j * self.theta) * E1[i-1]
+            dE1_dt = ((1 + 1j * self.D_omeg) * N1[i-1] * E1[i-1]) - (0.5 * E1[i-1]) - (1j * self.d_omeg * E1[i-1]) + (self.K * np.exp(1j * self.theta) * E2[i-1])
+            dE2_dt = ((1 + 1j * self.D_omeg) * N2[i-1] * E2[i-1]) - (0.5 * E2[i-1]) + (1j * self.d_omeg * E2[i-1]) + (self.K * np.exp(1j * self.theta) * E1[i-1])
             dN1_dt = (1 / self.T) * (self.p - N1[i-1]  - 2 * N1[i-1] * (np.abs(E1[i-1]))**2)
             dN2_dt = (1 / self.T) * (self.p - N2[i-1]  - 2 * N2[i-1] * (np.abs(E2[i-1]))**2)
 
@@ -131,17 +132,17 @@ def simulate(params):
     if num_maxima > 0:
         max_intensity = max(unique_maxima)
     else:
-        max_intensity = E1_abs[round(8000/0.05)]**2  # or any other value indicating no maxima
+        max_intensity = E1_abs[round(12000/0.05)]  # or any other value indicating no maxima
     
     if num_minima > 0:
         min_intensity = min(unique_minima)
     else:
-        min_intensity = E1_abs[round(8000/0.05)]**2  # or any other value indicating no minima
+        min_intensity = E1_abs[round(12000/0.05)]  # or any other value indicating no minima
     return num_maxima
 
 if __name__ == '__main__':
     # ... rest of your code ...
-    mesh = 10
+    mesh = 5
     d_omeg_values = np.linspace(-0.2, 0.2, mesh)  # replace 0.1 and 1.0 with your desired range
     theta_values = np.linspace(0, 2*np.pi, mesh)
 
@@ -166,7 +167,9 @@ if __name__ == '__main__':
     # plt.legend()
     # plt.show()
 
-    
+    id = random_integer = random.randint(1, 1000)
+    bound_names = ['locked', '1', '2', f'$\\geq3$', f'$\\geq8$']
+
 
     # # Ensure maxima_counts is defined and manipulated within the same block
     maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
@@ -175,13 +178,19 @@ if __name__ == '__main__':
     bounds = [-0.5, 0.5, 1.5, 8, 200]
     norm = mcolors.BoundaryNorm(bounds, len(colors))
     cmap = mcolors.ListedColormap(colors)
+    
 
     plt.imshow(maxima_counts, origin='lower', extent=[0, 2*np.pi, -0.2, 0.2], aspect='auto', cmap=cmap, norm=norm)
-    plt.colorbar(label='Number of unique maxima')
-    plt.xlabel('theta')
-    plt.ylabel('d_omeg')
-    plt.title('Number of unique maxima for different d_omeg and theta')
-    plt.savefig('unique_maxima_heatmap_0.pdf')
+    plt.tick_params(axis='both', which='major', labelsize=14)
+
+    cbar = plt.colorbar(ticks=bounds, label='Number of unique maxima')
+
+    cbar.ax.set_yticklabels(bound_names)
+
+    plt.xlabel(f'$\\theta$', fontsize=20)
+    plt.ylabel(f'$\delta\omega$', fontsize = 20)
+    plt.title('Number of unique maxima')
+    plt.savefig(f'unique_maxima_heatmap_{id}.png')
     plt.show()
         
         
