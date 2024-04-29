@@ -142,7 +142,7 @@ def simulate(params):
 
 if __name__ == '__main__':
     # ... rest of your code ...
-    mesh = 5
+    mesh = 20
     d_omeg_values = np.linspace(-0.2, 0.2, mesh)  # replace 0.1 and 1.0 with your desired range
     theta_values = np.linspace(0, 2*np.pi, mesh)
 
@@ -168,14 +168,14 @@ if __name__ == '__main__':
     # plt.show()
 
     id = random_integer = random.randint(1, 1000)
-    bound_names = ['locked', '1', '2', f'$\\geq3$', f'$\\geq8$']
+    bound_names = ['locked', '1', '2', f'$\\geq3$', f'$\\geq8$', '']
 
 
     # # Ensure maxima_counts is defined and manipulated within the same block
     maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
     # Visualization code that uses maxima_counts should also be inside this block
-    colors = ['yellow', 'lightblue', 'blue', 'darkblue', 'black']
-    bounds = [-0.5, 0.5, 1.5, 8, 200]
+    colors = ['yellow', 'white','lightblue', 'blue', 'darkblue', 'black']
+    bounds = [-0.5, 0.5, 1.5, 2.7,7.5, 200]
     norm = mcolors.BoundaryNorm(bounds, len(colors))
     cmap = mcolors.ListedColormap(colors)
     
