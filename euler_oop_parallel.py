@@ -33,10 +33,10 @@ class LaserDESolver:
         N2 = np.zeros(len(time))
         E1_abs = np.zeros(len(time)) 
         # Initial conditions
-        E1_0 = 5*np.random.rand() + 5*np.random.rand() * 1j
-        E2_0 = 5*np.random.rand() + 5*np.random.rand() * 1j
-        N1_0 = 5*np.random.rand()
-        N2_0 = 5*np.random.rand()
+        E1_0 = 1*np.random.rand() + 1*np.random.rand() * 1j
+        E2_0 = 1*np.random.rand() + 1*np.random.rand() * 1j
+        N1_0 = 1*np.random.rand()
+        N2_0 = 1*np.random.rand()
 
         # Time step and simulation time
         
@@ -67,20 +67,18 @@ class LaserDESolver:
         return E1_abs, time
 
     @staticmethod
-    def count_unique_maxima(x,tolerance= 1e-1):
-    # Find indices of local maxima
-        
+    def count_unique_maxima(x,tolerance= 1e-2):
         unique_maxima = np.array([])
         if np.all(np.isclose(x, x[0], atol=tolerance)):
             num_maxima = 0
         else:
-            max_indices = np.where((np.roll(x, 1) < x) & (np.roll(x, -1) < x))[0] 
+            max_indices = np.where((np.roll(x, 1) < x) & (np.roll(x, -1) < x))[0]
+            max_indices = max_indices[(max_indices != 0) & (max_indices != len(x)-1)]  # Exclude first and last index
             unique_maxima = np.unique(np.round(x[max_indices], int(np.ceil(-np.log10(tolerance)))))
-            
         num_maxima = len(unique_maxima)     
         return unique_maxima, num_maxima
     
-    def count_unique_minima(x, tolerance=1e-1):
+    def count_unique_minima(x, tolerance=1e-2):
     # Find indices of local minima
         unique_minima = np.array([])
         if np.all(np.isclose(x, x[0], atol=tolerance)):
@@ -140,58 +138,58 @@ def simulate(params):
         min_intensity = E1_abs[round(12000/0.05)]  # or any other value indicating no minima
     return num_maxima
 
-if __name__ == '__main__':
-    # ... rest of your code ...
-    mesh = 20
-    d_omeg_values = np.linspace(-0.2, 0.2, mesh)  # replace 0.1 and 1.0 with your desired range
-    theta_values = np.linspace(0, 2*np.pi, mesh)
+# if __name__ == '__main__':
+#     # ... rest of your code ...
+#     mesh = 10
+#     d_omeg_values = np.linspace(-0.2, 0.2, mesh)  # replace 0.1 and 1.0 with your desired range
+#     theta_values = np.linspace(0, 2*np.pi, mesh)
 
-    # Parallelize simulations
-    #
-    params = list(itertools.product(d_omeg_values, theta_values))
-    with Pool() as p:
-        maxima_counts = p.map(simulate, params)
-
-
-    # Separate the results into two lists: thetas and maxima
-    maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
+#     # Parallelize simulations
+#     #
+#     params = list(itertools.product(d_omeg_values, theta_values))
+#     with Pool() as p:
+#         maxima_counts = p.map(simulate, params)
 
 
-    # Plot the maxima intensities with respect to theta
-    # plt.figure()
-    # plt.plot(thetas, maxima, 'o', label='Maxima')
-    # plt.plot(thetas, minima, 'o', label='Minima')
-    # plt.xlabel('theta')
-    # plt.ylabel('E_abs')
-    # plt.title('Maxima and Minima intensities with respect to theta')
-    # plt.legend()
-    # plt.show()
-
-    id = random_integer = random.randint(1, 1000)
-    bound_names = ['locked', '1', '2', f'$\\geq3$', f'$\\geq8$', '']
+#     # Separate the results into two lists: thetas and maxima
+#     maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
 
 
-    # # Ensure maxima_counts is defined and manipulated within the same block
-    maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
-    # Visualization code that uses maxima_counts should also be inside this block
-    colors = ['yellow', 'white','lightblue', 'blue', 'darkblue', 'black']
-    bounds = [-0.5, 0.5, 1.5, 2.7,7.5, 200]
-    norm = mcolors.BoundaryNorm(bounds, len(colors))
-    cmap = mcolors.ListedColormap(colors)
-    
+#     # Plot the maxima intensities with respect to theta
+#     # plt.figure()
+#     # plt.plot(thetas, maxima, 'o', label='Maxima')
+#     # plt.plot(thetas, minima, 'o', label='Minima')
+#     # plt.xlabel('theta')
+#     # plt.ylabel('E_abs')
+#     # plt.title('Maxima and Minima intensities with respect to theta')
+#     # plt.legend()
+#     # plt.show()
 
-    plt.imshow(maxima_counts, origin='lower', extent=[0, 2*np.pi, -0.2, 0.2], aspect='auto', cmap=cmap, norm=norm)
-    plt.tick_params(axis='both', which='major', labelsize=14)
+#     id = random_integer = random.randint(1, 1000)
+#     bound_names = ['locked', '1', '2', f'$\\geq3$', f'$\\geq8$', '']
 
-    cbar = plt.colorbar(ticks=bounds, label='Number of unique maxima')
 
-    cbar.ax.set_yticklabels(bound_names)
+#     # # Ensure maxima_counts is defined and manipulated within the same block
+#     maxima_counts = np.array(maxima_counts).reshape((mesh, mesh))
+#     # Visualization code that uses maxima_counts should also be inside this block
+#     colors = ['yellow', 'white','lightblue', 'blue', 'darkblue', 'black']
+#     bounds = [-0.5, 0.5, 1.5, 2.7,7.5, 10000]
+#     norm = mcolors.BoundaryNorm(bounds, len(colors))
+#     cmap = mcolors.ListedColormap(colors)
+#     print(maxima_counts)
 
-    plt.xlabel(f'$\\theta$', fontsize=20)
-    plt.ylabel(f'$\delta\omega$', fontsize = 20)
-    plt.title('Number of unique maxima')
-    plt.savefig(f'unique_maxima_heatmap_{id}.png')
-    plt.show()
+#     plt.imshow(maxima_counts, origin='lower', extent=[0, 2*np.pi, -0.2, 0.2], aspect='auto', cmap=cmap, norm=norm)
+#     plt.tick_params(axis='both', which='major', labelsize=14)
+
+#     cbar = plt.colorbar(ticks=bounds, label='Number of unique maxima')
+
+#     cbar.ax.set_yticklabels(bound_names)
+
+#     plt.xlabel(f'$\\theta$', fontsize=20)
+#     plt.ylabel(f'$\delta\omega$', fontsize = 20)
+#     plt.title('Number of unique maxima')
+#     plt.savefig(f'unique_maxima_heatmap_{id}.png')
+#     plt.show()
         
         
 
@@ -206,29 +204,26 @@ if __name__ == '__main__':
 #     for j in range(d_omeg_grid.shape[1]):
 #         print(f"umax[{i}][{j}] = {umax[i][j]}")
 
-# solver = LaserDESolver(D_omeg=3, d_omeg=d_omeg_grid[2,2], K=0.1, theta=theta_grid[2,2], T=392, p=2)
-# dt = 0.05
-# start_count = round(7000/dt)
-# E1_abs, time = solver.solve()
-# x = E1_abs[start_count:]
-
-# if np.all(np.isclose(x, x[0], atol=tolerance)):
-#     num_maxima = 0
-# else:
-#     max_indices = np.where((np.roll(x, 1) < x) & (np.roll(x, -1) < x))[0] 
-#     unique_maxima = np.unique(np.round(x[max_indices], int(np.ceil(-np.log10(tolerance)))))
-#     num_maxima = len(unique_maxima)
-
-# print(f"Number of unique maxima: {num_maxima}")
+solver = LaserDESolver(D_omeg=3, d_omeg= -0.10, K=0.1, theta=1.8, T=392, p=2)
+dt = 0.05
+start_count = round(12000/dt)
+E1_abs, time = solver.solve()
+x = E1_abs[start_count:]
+num_maxima =  LaserDESolver.count_unique_maxima(x)[1]
+unique_maxima = LaserDESolver.count_unique_maxima(x)[0]
 
 
-# plt.plot(time, E1_abs, label='|E1| over time')
-# plt.xlabel('Time[ps]')
-# plt.ylabel('|E1|')
-# plt.title(f'Absolute value of E1 over time)' )
-# plt.legend()
-# plt.grid(True)
-# plt.show()
+print(f"Number of unique maxima: {num_maxima}")
+print(f"Unique maxima: {unique_maxima}")
+
+
+plt.plot(time, E1_abs, label='|E1| over time')
+plt.xlabel('Time[ps]')
+plt.ylabel('|E1|')
+plt.title(f'Absolute value of E1 over time)' )
+plt.legend()
+plt.grid(True)
+plt.show()
         
 
 
